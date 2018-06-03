@@ -10,6 +10,13 @@ import { MEDIA_OBJECTS } from '../mock-media-objects';
 export class FunnyComponent implements OnInit {
 
   mediaObjects = MEDIA_OBJECTS
+
+  selectedMediaObject: mediaObject;
+
+  onSelect(mediaObject: mediaObject): void {
+    this.selectedMediaObject = mediaObject;
+    console.log(mediaObject.title + ' has been selected');
+  }
   constructor() { }
 
   ngOnInit() {
