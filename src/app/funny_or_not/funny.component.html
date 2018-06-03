@@ -1,0 +1,22 @@
+<div class="fc-body container">
+  <div class="fc-media-objects row">
+    <div
+      *ngFor="let mediaObject of mediaObjects"
+      (click)="onSelect(mediaObject)"
+      class="fc-media-object col-6 col-sm-4 col-md-3 col-lg-2"
+    >
+      <img
+        src="{{mediaObject.imgUrl}}"
+        class="fc-media-object-img"
+      >
+
+      <div class="fc-media-object-title">
+        {{mediaObject.title}}
+      </div>
+
+      <div class="fc-media-object-desc">
+        {{mediaObject.desc}}
+      </div>
+    </div>
+  </div>
+</div>
