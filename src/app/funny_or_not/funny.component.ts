@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaObject } from '../media-object';
+import { MEDIA_OBJECTS } from '../mock-media-objects';
 
 @Component({
   selector: 'app-funny',
@@ -8,6 +9,7 @@ import { MediaObject } from '../media-object';
 })
 export class FunnyComponent implements OnInit {
 
+  mediaObjects = MEDIA_OBJECTS
   constructor() { }
 
   ngOnInit() {

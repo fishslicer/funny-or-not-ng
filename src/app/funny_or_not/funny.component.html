@@ -1,9 +1,14 @@
-<h1>
-    THIS IS THE FUNNY BODY
-</h1>
-<div>
-    THIS IS THE FUNNY DESC
-</div>
-<div>
-    THIS IS THE FUNNY END
+<div class="funny-component-body">
+  <div
+    *ngFor="let mediaObject of mediaObjects"
+    class="funny-component-media-object"
+  >
+    <div class="fc-media-object-title">
+      {{mediaObject.title}}
+    </div>
+
+    <div class="fc-media-object-desc">
+      {{mediaObject.desc}}
+    </div>
+  </div>
 </div>
