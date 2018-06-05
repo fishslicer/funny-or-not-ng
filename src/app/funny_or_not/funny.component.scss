@@ -1,6 +1,7 @@
 @import "../app.component.scss";
 
 .fc-body {
+  background-color: $body-background;
   color: #ddd5c4;
 }
 
@@ -8,6 +9,7 @@
 
 .fc-media-selected {
   background-color: $primary-background;
+  margin-bottom: 20px;
 }
 
 .fc-media-selected-title {

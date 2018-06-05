@@ -1,81 +1,85 @@
-<div class="fc-body container">
+<div class="fc-body">
+  <div class="container">
 
-  <!--Selected media object-->
-  <div
-    *ngIf="selectedMediaObject"
-    class="fc-media-selected text-center"
-  >
-
-    <!--Selected Content (img, title, desc)-->
-    <div class="fc-media-selected-title">
-      {{selectedMediaObject.title}}
-    </div>
-    <img
-      src="{{selectedMediaObject.imgUrl}}"
-      class="fc-media-object-img"
-    >
-    <div class="fc-media-selected-desc">
-      {{selectedMediaObject.desc}}
-    </div>
-
-    <!--Selected votes-->
-    <div class="fc-media-selected-votes">
-      <div class="fc-media-selected-votes-up">
-        +{{selectedMediaObject.upVotes}}
-      </div>
-      <div class="fc-media-selected-votes-down">
-        -{{selectedMediaObject.downVotes}}
-      </div>
-    </div>
-
-    <!--Selected panel controls-->
-    <div class="fc-media-selected-panel">
-      <button
-        class="fc-media-selected-down btn btn-success"
-      >
-        GUD
-      </button>
-      <button
-        class="fc-media-selected-prev btn btn-light"
-      >
-        <--
-      </button>
-      <button
-        class="fc-media-selected-dl btn btn-dark"
-      >
-        DL
-      </button>
-      <button
-        class="fc-media-selected-next btn btn-light"
-      >
-        -->
-      </button>
-      <button
-        class="fc-media-selected-up btn btn-danger"
-      >
-        BAD
-      </button>
-    </div>
-  </div>
-
-  <!--Media object list-->
-  <div class="fc-media-objects row">
+    <!--Selected media object-->
     <div
-      *ngFor="let mediaObject of mediaObjects"
-      (click)="onSelect(mediaObject)"
-      class="fc-media-object col-6 col-sm-4 col-md-3 col-lg-2"
+      *ngIf="selectedMediaObject"
+      class="fc-media-selected text-center"
     >
+
+      <!--Selected Content (img, title, desc)-->
+      <div class="fc-media-selected-title">
+        {{selectedMediaObject.title}}
+      </div>
       <img
-        src="{{mediaObject.imgUrl}}"
+        src="{{selectedMediaObject.imgUrl}}"
         class="fc-media-object-img"
       >
-
-      <div class="fc-media-object-title">
-        {{mediaObject.title}}
+      <div class="fc-media-selected-desc">
+        {{selectedMediaObject.desc}}
       </div>
 
-      <div class="fc-media-object-desc">
-        {{mediaObject.desc}}
+      <!--Selected votes-->
+      <div class="fc-media-selected-votes">
+        <div class="fc-media-selected-votes-up">
+          +{{selectedMediaObject.upVotes}}
+        </div>
+        <div class="fc-media-selected-votes-down">
+          -{{selectedMediaObject.downVotes}}
+        </div>
+      </div>
+
+      <!--Selected panel controls-->
+      <div class="fc-media-selected-panel">
+        <button
+          (click)="upVote(selectedMediaObject)"
+          class="fc-media-selected-down btn btn-success"
+        >
+          GUD
+        </button>
+        <button
+          class="fc-media-selected-prev btn btn-light"
+        >
+          <--
+        </button>
+        <button
+          class="fc-media-selected-dl btn btn-dark"
+        >
+          DL
+        </button>
+        <button
+          class="fc-media-selected-next btn btn-light"
+        >
+          -->
+        </button>
+        <button
+          (click)="downVote(selectedMediaObject)"
+          class="fc-media-selected-up btn btn-danger"
+        >
+          BAD
+        </button>
+      </div>
+    </div>
+
+    <!--Media object list-->
+    <div class="fc-media-objects row">
+      <div
+        *ngFor="let mediaObject of mediaObjects"
+        (click)="onSelect(mediaObject)"
+        class="fc-media-object col-6 col-sm-4 col-md-3 col-lg-2"
+      >
+        <img
+          src="{{mediaObject.imgUrl}}"
+          class="fc-media-object-img"
+        >
+
+        <div class="fc-media-object-title">
+          {{mediaObject.title}}
+        </div>
+
+        <div class="fc-media-object-desc">
+          {{mediaObject.desc}}
+        </div>
       </div>
     </div>
   </div>
