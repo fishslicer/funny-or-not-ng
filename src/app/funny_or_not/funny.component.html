@@ -5,6 +5,8 @@
     *ngIf="selectedMediaObject"
     class="fc-media-selected text-center"
   >
+
+    <!--Selected Content (img, title, desc)-->
     <div class="fc-media-selected-title">
       {{selectedMediaObject.title}}
     </div>
@@ -15,15 +17,18 @@
     <div class="fc-media-selected-desc">
       {{selectedMediaObject.desc}}
     </div>
+
+    <!--Selected votes-->
     <div class="fc-media-selected-votes">
       <div class="fc-media-selected-votes-up">
-        {{selectedMediaObject.upVotes}}
+        +{{selectedMediaObject.upVotes}}
       </div>
       <div class="fc-media-selected-votes-down">
-        {{selectedMediaObject.downVotes}}
+        -{{selectedMediaObject.downVotes}}
       </div>
     </div>
 
+    <!--Selected panel controls-->
     <div class="fc-media-selected-panel">
       <button
         class="fc-media-selected-down btn btn-success"

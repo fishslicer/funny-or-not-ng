@@ -15,6 +15,28 @@
   font-weight: bold;
 }
 
+.fc-media-selected-desc {
+  text-align: left;
+}
+
+
+.fc-media-selected-votes {
+  font-weight: bold;
+  height: 30px;
+
+  .fc-media-selected-votes-up {
+    color: $up-vote-color;
+    float: left;
+    margin-left: 15px;
+  }
+  
+  .fc-media-selected-votes-down {
+    color: $down-vote-color;
+    float: right;
+    margin-right: 15px;
+  }
+}
+
 //Media object list
 .fc-media-object {
   background-color: $primary-background;
