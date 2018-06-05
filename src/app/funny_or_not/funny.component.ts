@@ -12,7 +12,7 @@ export class FunnyComponent implements OnInit {
   mediaObjects = MEDIA_OBJECTS
 
   selectedMediaObject: MediaObject;
-
+  
   onSelect(mediaObject: MediaObject): void {
     this.selectedMediaObject = mediaObject;
     console.log(mediaObject.title + ' has been selected');
@@ -20,6 +20,7 @@ export class FunnyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectedMediaObject = this.mediaObjects[0];
   }
 
 }

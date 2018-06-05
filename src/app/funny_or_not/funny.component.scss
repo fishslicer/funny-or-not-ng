@@ -1,5 +1,21 @@
 @import "../app.component.scss";
 
+.fc-body {
+  color: #ddd5c4;
+}
+
+//Selected media object
+
+.fc-media-selected {
+  background-color: $primary-background;
+}
+
+.fc-media-selected-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+//Media object list
 .fc-media-object {
   background-color: $primary-background;
   cursor: pointer;

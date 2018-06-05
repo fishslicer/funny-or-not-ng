@@ -3,18 +3,53 @@
   <!--Selected media object-->
   <div
     *ngIf="selectedMediaObject"
-    class="fc-media-selected"
+    class="fc-media-selected text-center"
   >
+    <div class="fc-media-selected-title">
+      {{selectedMediaObject.title}}
+    </div>
     <img
       src="{{selectedMediaObject.imgUrl}}"
       class="fc-media-object-img"
     >
-    <div class="fc-media-selected-title">
-      {{selectedMediaObject.title}}
-    </div>
-
     <div class="fc-media-selected-desc">
       {{selectedMediaObject.desc}}
+    </div>
+    <div class="fc-media-selected-votes">
+      <div class="fc-media-selected-votes-up">
+        {{selectedMediaObject.upVotes}}
+      </div>
+      <div class="fc-media-selected-votes-down">
+        {{selectedMediaObject.downVotes}}
+      </div>
+    </div>
+
+    <div class="fc-media-selected-panel">
+      <button
+        class="fc-media-selected-down btn btn-success"
+      >
+        GUD
+      </button>
+      <button
+        class="fc-media-selected-prev btn btn-light"
+      >
+        <--
+      </button>
+      <button
+        class="fc-media-selected-dl btn btn-dark"
+      >
+        DL
+      </button>
+      <button
+        class="fc-media-selected-next btn btn-light"
+      >
+        -->
+      </button>
+      <button
+        class="fc-media-selected-up btn btn-danger"
+      >
+        BAD
+      </button>
     </div>
   </div>
 
