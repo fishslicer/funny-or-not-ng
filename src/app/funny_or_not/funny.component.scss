@@ -1,9 +1,11 @@
+@import "../app.component.scss";
+
 .fc-media-object {
-  background-color: darkcyan;
+  background-color: $primary-background;
   cursor: pointer;
 
   &:hover {
-    background-color: darkgoldenrod;
+    background-color: $primary-background-selected;
   }
 }
 

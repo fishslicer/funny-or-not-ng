@@ -11,9 +11,9 @@ export class FunnyComponent implements OnInit {
 
   mediaObjects = MEDIA_OBJECTS
 
-  selectedMediaObject: mediaObject;
+  selectedMediaObject: MediaObject;
 
-  onSelect(mediaObject: mediaObject): void {
+  onSelect(mediaObject: MediaObject): void {
     this.selectedMediaObject = mediaObject;
     console.log(mediaObject.title + ' has been selected');
   }

@@ -1,4 +1,24 @@
 <div class="fc-body container">
+
+  <!--Selected media object-->
+  <div
+    *ngIf="selectedMediaObject"
+    class="fc-media-selected"
+  >
+    <img
+      src="{{selectedMediaObject.imgUrl}}"
+      class="fc-media-object-img"
+    >
+    <div class="fc-media-selected-title">
+      {{selectedMediaObject.title}}
+    </div>
+
+    <div class="fc-media-selected-desc">
+      {{selectedMediaObject.desc}}
+    </div>
+  </div>
+
+  <!--Media object list-->
   <div class="fc-media-objects row">
     <div
       *ngFor="let mediaObject of mediaObjects"
