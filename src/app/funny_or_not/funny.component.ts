@@ -12,14 +12,23 @@ export class FunnyComponent implements OnInit {
   mediaObjects = MEDIA_OBJECTS
 
   selectedMediaObject: MediaObject;
-
+  
   onSelect(mediaObject: MediaObject): void {
     this.selectedMediaObject = mediaObject;
-    console.log(mediaObject.title + ' has been selected');
   }
+
+  upVote(curObject: MediaObject): void {
+    curObject.upVotes++;
+  }
+
+  downVote(curObject: MediaObject): void {
+    curObject.downVotes++;
+  }
+
   constructor() { }
 
   ngOnInit() {
+    this.selectedMediaObject = this.mediaObjects[0];
   }
 
 }
